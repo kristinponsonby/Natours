@@ -33,6 +33,48 @@ body {
     url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
+    /* position relative makes this parent header element the origin. so the child element logo-box uses this element as reference */
+    position: relative;
     
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+}
+
+.logo {
+    height: 35px;
+}
+
+.text-box {
+    /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    /* Use display block because my default it takes up the entire width available and creates a line break. */
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 40px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
 }
