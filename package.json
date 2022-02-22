@@ -1,0 +1,25 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristinponsonby/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass":"7.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/kristinponsonby/Natours/issues"
+  },
+  "homepage": "https://github.com/kristinponsonby/Natours#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
