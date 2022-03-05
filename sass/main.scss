@@ -1,23 +1,24 @@
-/*
-COLORS:
+@import "base/base";
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
+
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000; 
 
-/* the universal selector */
-* {
+*,
+*::after,
+*::before {
     margin: 0px; 
     padding: 0px;  
-    box-sizing: border-box;
-} 
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
 
 /*everything related to font, we specify here in the body */
 body {
@@ -26,7 +27,9 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
@@ -42,28 +45,29 @@ body {
     position: relative;
     
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    .logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    
+    }
+    
+    .logo {
+        height: 35px;
+    }
+    
+    .text-box {
+        /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
-.logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-
-}
-
-.logo {
-    height: 35px;
-}
-
-.text-box {
-    /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
 
 .heading-primary {
     color: $color-white;
@@ -157,12 +161,12 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 10px 20px rgba($color-black,.2);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba($color-black,.2);
 }
 
 .btn-white {
