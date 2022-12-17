@@ -1,12 +1,12 @@
-/* for animation use keyframes attribute */
+/*for animation use keyframes attribute */
 @keyframes moveInLeft {
-  /* where the animation starts */
+  /*where the animation starts */
   0% {
     opacity: 0;
-    transform: translateX(-100px); }
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(10px); }
-  /* where the animation end s */
+    transform: translateX(1rem); }
+  /* where the animation ends */
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -14,9 +14,9 @@
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px); }
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-10px); }
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -24,7 +24,7 @@
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px); }
+    transform: translateY(3rem); }
   100% {
     opacity: 1;
     transform: translate(0); } }
@@ -34,40 +34,45 @@
 *::before {
   margin: 0px;
   padding: 0px;
+  /*inheriting box sizing from body selector */
   box-sizing: inherit; }
 
 html {
   font-size: 62.5%; }
 
+/*We make our root font size an easily divisble number, i.e 10
+  10px is exactly 1rem
+  */
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem;
   box-sizing: border-box; }
 
-/*this here is the link pseudoclass. Link is a state of the button selector */
+/* this here is the link pseudoclass. Link is a state of the button selector */
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
-  position: relative; }
+  position: relative;
+  font-size: 1.6rem; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777; }
 
@@ -77,14 +82,14 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   transition: all .4s; }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff; }
 
 .btn:hover::after {
@@ -92,54 +97,59 @@ body {
   transform: scaleX(1.4) scaleY(1.4);
   opacity: 0; }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5 ease-out .75s;
   animation-fill-mode: backwards; }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   /* position relative makes this parent header element the origin. so the child element logo-box uses this element as reference */
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header .logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px; }
-  .header .logo {
-    height: 35px; }
-  .header .text-box {
-    /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
-    transform: translate(-50%, -50%);
-    text-align: center; }
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.header__text-box {
+  /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px; }
+  margin-bottom: 6rem; }
 
-.heading-primary-main {
+.heading-primary--main {
   /* Use display block because my default it takes up the entire width available and creates a line break. */
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 40px;
+  letter-spacing: 4rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  /* animation-delay: 3s;
-     animation-iteration-count: 3; */ }
+  animation-delay: 3s; }
 
-.heading-primary-sub {
+/* animation-delay: 3s;
+     animation-iteration-count: 3;
+     */
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.7rem;
   animation: moveInRight 1s ease-out; }

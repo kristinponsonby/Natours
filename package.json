@@ -1,25 +1,22 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "landing page",
+  "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w" 
+    "compile:sass": "node-sass sass/main.scss css/style.css"   
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kristinponsonby/Natours.git"
   },
-  "author": "",
+  "author": "Kristin Ponsonby",
   "license": "ISC",
-  "devDependencies": {
-    "node-sass":"7.0.1"
-  },
   "bugs": {
     "url": "https://github.com/kristinponsonby/Natours/issues"
   },
   "homepage": "https://github.com/kristinponsonby/Natours#readme",
-  "dependencies": {
-    "node-sass": "^7.0.1"
+  "devDependencies": {
+    "node-sass": "^8.0.0"
   }
 }
