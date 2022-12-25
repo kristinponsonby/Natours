@@ -1,0 +1,19 @@
+*,
+  *::after,
+  *::before {
+    margin: 0px;
+    padding: 0px;
+    /*inheriting box sizing from body selector */
+    box-sizing: inherit; 
+  }
+  
+  html {
+    font-size: 62.5%; 
+  }
+  /*We make our root font size an easily divisble number, i.e 10
+  10px is exactly 1rem
+  */
+  
+  body {
+    box-sizing: border-box; 
+  }

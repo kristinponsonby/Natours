@@ -1,0 +1,36 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    /* position relative makes this parent header element the origin. so the child element logo-box uses this element as reference */
+    position: relative;
+  
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+    }
+
+    &__logo {
+       height: 3.5rem;
+    }
+   
+    &__text-box {
+       /* Use absolute positioning to position the header box no matter what device the page is viewed on. */
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       /* translate means the element is now being moved relative to the box itself, putting it exactly in the middle */
+       transform: translate(-50%, -50%);
+       text-align: center;
+    }
+   }
+   

@@ -1,0 +1,11 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+        //clear will clear whether we used float:left or float:right
+    }
+
+}
+
+//clearfix will append a pseudo elemnt after the element which will clear these floats
