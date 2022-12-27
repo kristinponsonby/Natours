@@ -70,7 +70,7 @@
 .btn-text {
   &:link,
   &:visited {
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
@@ -88,6 +88,6 @@
 
   &:active {
     box-shadow: 0 .5rem 1rem rgba($color-black, .15);
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
