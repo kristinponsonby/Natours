@@ -37,6 +37,15 @@
           background-color: $color-white; 
         }
      }
+
+     &--green {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &::after {
+          background-color: $color-white; 
+        }
+     }
      
     /*the after pseudo element is basically treated like a child of the btn */
     &::after {

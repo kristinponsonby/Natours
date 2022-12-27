@@ -9,7 +9,7 @@
     background-position: top;
     /* position relative makes this parent header element the origin. so the child element logo-box uses this element as reference */
     position: relative;
-  
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &__logo-box {
