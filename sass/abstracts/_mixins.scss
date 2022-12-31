@@ -9,3 +9,10 @@
 }
 
 //clearfix will append a pseudo elemnt after the element which will clear these floats
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
