@@ -1,3 +1,20 @@
+/*
+Breakpoints: 
+0 - 600px:      Phone
+600-900px:      Tablet portrait mode 
+900-1200px:     Tablet landscape mode
+1200-1800px:    Where normal styles apply
+1800px + :      Big desktop screens
+*/
+/*
+    $breakpoint argument choices:
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+    */
+/*the if directive(@if) and the content directive (@content) are native to Sass*/
+/*convert pixels to em. so 600px / 16 = 37.5em */
 /*for animation use keyframes attribute */
 @keyframes moveInLeft {
   /*where the animation starts */
@@ -38,11 +55,23 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*We make our root font size an easily divisble number, i.e 10
+    10px is exactly 1rem
+    */ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
-/*We make our root font size an easily divisble number, i.e 10
-  10px is exactly 1rem
-  */
 body {
   box-sizing: border-box; }
 
