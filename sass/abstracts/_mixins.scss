@@ -38,6 +38,8 @@ Breakpoints:
     -big-desktop
     */
 
+    // ORDER: Base + Typography > general layout + grid > page layout > components
+
     /*the if directive(@if) and the content directive (@content) are native to Sass*/
     /*convert pixels to em. so 600px / 16 = 37.5em */
     @mixin respond($breakpoint) {
